@@ -10,5 +10,20 @@ To reproduce experiments, do the following steps:
 
 1. [Setup a Kubernetes cluster on GKE](setup-kubernetes-cluster.md)
 2. Install and compile `go-ycsb`
+
+    We are going to use `go-ycsb` to run our benchmarking tests. To get install and compile `go-ycsb`, run the following commands:
+
+    ```
+    git clone https://github.com/pingcap/go-ycsb.git $GOPATH/src/github.com/pingcap/go-ycsb
+    cd $GOPATH/src/github.com/pingcap/go-ycsb
+    make
+    ```
+
+    To verify that it is working, run:
+
+    ```
+    ./bin/go-ycsb
+    ```
+
 3. Deploy a database to the cluster
 4. Load and run each YCSB workload
