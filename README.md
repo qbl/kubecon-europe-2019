@@ -26,4 +26,9 @@ To reproduce experiments, do the following steps:
     ```
 
 3. Deploy a database to the cluster
+
+    Choose one of the following instructions to setup a database cluster:
+
+    - [CokcroachDB](deploy-cockroachdb.md)
+
 4. Load and run each YCSB workload
