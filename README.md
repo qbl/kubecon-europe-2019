@@ -8,7 +8,7 @@ This repository contains steps to reproduce our experiments on Benchmarking Clou
 
 To reproduce experiments, do the following steps:
 
-1. Setup a Kubernetes cluster on GKE
+1. [Setup a Kubernetes cluster on GKE](setup-kubernetes-cluster.md)
 2. Install and compile `go-ycsb`
 3. Deploy a database to the cluster
 4. Load and run each YCSB workload
