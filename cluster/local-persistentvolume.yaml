@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: volume-0
+spec:
+  capacity:
+    storage: 500Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-ssd
+  local:
+    path: /mnt/disks/ssd0
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: "kubernetes.io/hostname"
+          operator: "In"
+          values: ["gke-benchmark-sandbox-default-pool-99da7494-1hm2"]
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: volume-1
+spec:
+  capacity:
+    storage: 500Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-ssd
+  local:
+    path: /mnt/disks/ssd0
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: "kubernetes.io/hostname"
+          operator: "In"
+          values: ["gke-benchmark-sandbox-default-pool-99da7494-4zt0"]
+
+---
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: volume-2
+spec:
+  capacity:
+    storage: 500Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: local-ssd
+  local:
+    path: /mnt/disks/ssd0
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: "kubernetes.io/hostname"
+          operator: "In"
+          values: ["gke-benchmark-sandbox-default-pool-99da7494-q2s9"]
